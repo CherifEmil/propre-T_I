@@ -36,7 +36,7 @@ function ab2str(buf) {
   ).then((keyPair) => {
     const exportButton = document.querySelector("#sub_N_contact");
     let New_name = document.querySelector("#n_Name");
-    let New_mail = document.querySelector("#n_Mail");;
+    let New_mail = document.querySelector("#n_Mail");
     exportButton.addEventListener("click", () => {
         exportCryptoKeyPu(keyPair.publicKey).then(Str_data =>{
             let New_mail = document.querySelector("#n_Mail");;

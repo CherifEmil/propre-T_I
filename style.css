@@ -505,7 +505,7 @@ text-shadow: 1px 1px 2px rgb(8, 195, 228), 0 0 25px rgb(207, 38, 16), 0 0 5px rg
 
 }
 #curtains{
-    display:block ;
+    display:none;
     z-index: 1030;
     position: absolute;
     top: 0;

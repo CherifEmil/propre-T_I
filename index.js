@@ -35,3 +35,4 @@ get_privateK =function(){
     return  privateKey.export({format: 'pem',type:"pkcs8"})
 }
 console.log(get_publicK())
+

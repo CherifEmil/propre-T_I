@@ -1,7 +1,9 @@
 /*-var-*/
 const a = [{from:"professeur@uqo.ca",message:  "Exemple d'un message\n  ...\n voilà" ,time:"A derterminer"}];
 const b = [];
-const c = [];
+const c = [{from:"Simon Parent",message:  "pars40@uqo.ca" ,time:"A derterminer"},
+{from:"Jérôme Després",message:  "desj116@uqo.ca" ,time:"A derterminer"},
+{from:"Amine Cherif",message:  "chea30@uqo.ca" ,time:"A derterminer"}];
 var liste = [] ;
 //------------------------------From data to table-------------------------------
 
@@ -29,6 +31,7 @@ function Insert_Data(tab_id,arr_data)
 Create_Data_M = function (tableD){
     let Mail = document.getElementById("address_mail");
     let Content = document.getElementById("content_mail");
+    
     //----
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
