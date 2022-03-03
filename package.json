@@ -1,0 +1,16 @@
+{
+  "name": "propre-t_i",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "node": "^17.5.0",
+    "window": "^4.2.7"
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>courriel</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Lien pour les icones-->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+ <div class="sidebar">
+     <div class="logo_content">
+             <div class="logo">
+                <a href="#">
+                 <i class='bx bxl-gmail bx-tada' ></i>
+                 <span class="logo_name">Course Email </span>
+                </a>
+            </div>
+            <i class='bx bx-menu bx-rotate-180' id="btn" ></i>
+    </div>
+  <ul class="ba">
+    <li id="read">
+        <a href="#" >
+            <i class='bx bx-message-dots'></i>
+            <span class="links_name"> La liste de messages</span>
+        </a>
+        <span class="tooltips"> La liste de messagese</span>
+        
+    </li>
+    <li id="send">
+        <a href="#">
+            <i class='bx bx-edit-alt' ></i>
+            <span class="links_name">Écrire un message</span>
+        </a>
+        <span class="tooltips">Écrire un message</span>
+        
+    </li>
+    <li id="contacts">
+        <a href="#">
+            <i class='bx bxs-contact' ></i>
+            <span class="links_name">Le carnet d'adresses</span>
+        </a>
+        <span class="tooltips">Le carnet d'adresses</span>
+        
+    </li>
+  </ul>
+
+  <div class ="profile_content">
+      <div class="profil">
+          <i class="dit_auteur">Auteurs</i>
+            <div class="profile_detail">
+                <ul class="na">
+                    
+                    <li>
+                        <a href="#">
+                            <img src="j_auteur.png" class="auteur1" alt="">
+                            <span class="links_name">Jérôme Després</span>
+                            <span class="tooltips2"> Jérôme Després</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="S_auteur.png" class="auteur1" alt="">
+                            <span class="links_name">Simon Parent</span>
+                            <span class="tooltips2">Simon Parent </span>
+                        
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="profil.jpg" class="auteur1" alt="">
+                            <span class="links_name">Amine Chérif</span>
+                            <span class="tooltips2"> Amine Chérif</span>
+                        
+                        </a>
+                    </li>
+                </ul>
+                    
+            </div>
+      </div>
+    </div>
+</div> 
+</div>
+<div class="Pdep">
+    <div class="titre1"><h1 class="T_ecrire"></h1></div>
+    <div class="contenu1">
+        <table id="T_From_M">
+            <thead>
+            <tr>
+                <th id="prec_to">De </th>
+                <th>Contenu</th>
+                <th><i class='bx bxs-time bx-spin bx-rotate-270' id="time"></i></th>
+
+            </tr>
+        </thead>
+        <tbody id="M_body">
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+            </tr>
+
+        </tbody>
+        </table>    
+    </div>
+    <div class="content_tabel_mail">
+        <i class='bx bxs-receipt' id="received_M" ></i>
+        <i class='bx bxs-send' id="send_M" ></i>
+    </div>
+    <div class="contenu2">
+        
+        <h2 class="title_M">Destinataire </h2>
+      
+        <input type="text" name="email" id="address_mail" class="address_mail" >
+        <h2 class="title_M">Contenu</h2>
+        <textarea type="text" name="content_mail" id="content_mail" class="content_mail">
+        </textarea>
+        <button type="submit" class="send_mail">Envoyer le message</button>
+    </div>
+    <div class="contenu3">  
+        <table id="T_Contact">
+            <thead>
+                <tr>
+                    <th>Name </th>
+                    <th>Email</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="C_body">
+                <tr>
+                    <td>a</td>
+                    <td>b</td>
+                    <td>c</td>
+                </tr>
+            </tbody>
+
+        </table>    
+    </div>
+    <div class="add_rem_contact">
+        <i class='bx bxs-message-square-add' id="NC_add"></i>
+        <i class='bx bxs-message-square-x' id="C_rem"></i>
+            
+    </div>
+</div>
+<div id="curtains">
+    <div id="wing">
+        <i class='bx bx-exit-fullscreen' id="out"></i>
+        <div id="wind_add">
+            <h1>Ajouter un nouveau contact</h1><br>
+            <form >
+                <label for="N_name">le nom du Nouveau contact</label>
+                &nbsp;&nbsp;
+                <input type="text"  id="n_Name"><br><br>
+                <label for="N_mail">Le email du nouveau contact </label>
+                &nbsp;&nbsp;
+                <input type="text"  id="n_Mail"><br><br>
+                <br>
+                <input type="button" id="sub_N_contact" value="Ajouter le nouveau contact">
+
+               
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+    
+<script src="./js/slide_B.js"></script>
+<script src="./js/windows.js"></script>
+ <script src="./js/keygenbet.js"></script>
+
+</body>
+</html>

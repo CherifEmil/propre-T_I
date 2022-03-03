@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    
+}
+ul.ba {
+    list-style-type: none;
+}
+textarea {
+    resize: none;
+  }
+body{
+    position:relative;
+    min-height: 100vh; 
+    width: 100%;
+    background: linear-gradient(-45deg, #ffffff, #cdeff5, #61b3d1, #69bfe0);
+   background-size: 400% 400%;
+    overflow:hidden;
+    animation: gradient 5s ease infinite;
+    overflow: auto;
+
+}
+.sidebar{
+z-index: 1030;
+position:fixed;
+top: 0;
+left: 0;
+height: 100%;
+width: 68px;
+background: #11101d;
+padding:5px 12px;
+border-radius: 20px;
+transition:all 1s ease;
+}
+.sidebar.active{
+width: 240px;
+}
+.sidebar .logo_content .logo{
+ color:rgb(236, 228, 228);
+ display: flex;
+ height: 50px; 
+ width: 100%;
+ align-items: end;  
+ opacity: 0;
+ pointer-events: none;
+}
+.sidebar.active .logo_content .logo{
+ opacity:1;   
+ pointer-events: none;
+ transition-delay: 0.4s;
+}
+.logo_content .logo i{
+    font-size: 50px;
+    color: aqua;
+    margin-right: 5px;
+}
+.logo_content .logo .logo_name{
+    position: absolute;
+    display:block;
+    pointer-events: none;
+    color:#fff;
+    left:70px;
+    top: 15px;;
+    font-size: 20px;
+    margin-right: 400;
+}
+.sidebar #btn{
+    position: absolute;
+    color:#fff;
+    left:50%;
+    top:6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform:translate(-50%)
+    
+}
+.sidebar.active #btn{
+    left:90%; 
+}
+.sidebar ul{
+    margin-top: 10px;
+}
+.sidebar ul li{
+position:relative;
+height: 49px;
+width: 100%;
+margin: 0px 10px;
+list-style: none ;
+line-height: 0px;
+align-items:center;
+
+}
+
+.sidebar ul li .tooltips{
+    position: absolute;
+    left:122px;
+    top:0;
+    transform: translateY(-50%,-50%);
+    border-radius: 6px;
+    height:35px;
+    width: 222px;
+    background: rgb(214, 144, 144);
+    line-height: 35px ;
+    text-align: center;
+    box-shadow: 0 6px  10px rgba(5, 61, 75, 0.7);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display:block;
+}
+.sidebar ul li:hover .tooltips{
+    transition: all 0.5s ease;
+    top:10%;
+    opacity:1 ;
+    pointer-events: none;
+}
+.sidebar.active ul li:hover .tooltips{
+display:none;
+}
+
+.sidebar ul li .tooltips2{
+    color: rgb(245, 238, 238);position: absolute;
+    left:122px;
+    top:0;
+    transform: translateY(-50%,-50%);
+    
+    border-radius: 6px;
+    height:35px;
+    width: 222px;
+    background: rgb(4, 78, 238);
+    line-height: 35px ;
+    text-align: center;
+    box-shadow: 0 6px  10px rgba(5, 61, 75, 0.7);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display:block;
+}
+.sidebar ul li:hover .tooltips2{
+    transition: all 0.5s ease;
+    top:10%;
+    opacity:1 ;
+    pointer-events: none;
+}
+.sidebar.active ul li:hover .tooltips2{
+display:none;
+}
+
+.sidebar ul li a{
+    color:#fff;
+    display:flex ;
+    align-items:center;
+    text-decoration: none;
+    transition:all 0.7s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+    transform: translateX(-20%);
+}
+.sidebar.active ul li a{
+    color:#fff;
+    display:flex ;
+    align-items:center;
+    text-decoration: none;
+    transition:all 0.7s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+    transform: translateX(-5%);
+}
+
+.sidebar ul li a:hover{
+    color:rgb(23, 148, 231);
+    border-radius: 20px;
+    transform: translateX(+5%);
+}
+.sidebar.active ul li a:hover{
+    color:rgb(17, 16, 29);
+    background: rgb(203, 213, 216);
+    border: 4px ridge rgba(17, 16, 29, 1);
+    border-radius: 20px;
+    transform: translateX(+5%);
+}
+.sidebar ul li a i{
+    height:50px;
+    min-width:50px;
+    border-radius: 1000px;
+    line-height: 50px ;
+    text-align: top;
+    transform: translateX(+15%);
+    font-size:20px;
+}
+.sidebar .links_name{
+    display:none;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .links_name{
+    display:block;
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar .profile_content{
+    position: absolute;
+    color:#fff;
+    bottom: 140px;
+    left:0;
+    width: 100%;
+
+    
+}
+.sidebar .profile_content .profil{
+    position: relative;
+    padding: 10px 6px;
+    height: 90px;
+    
+}
+.sidebar .profile_content .profil .profile_detail{
+display:flex;
+align-items: center;
+background: #1d1b31;
+border-radius: 20px;
+}
+.sidebar .profile_content .profil .dit_auteur{
+    margin-left: 55px;  
+    font-size: 30px;
+}
+.profil .profile_detail img{
+    height: 40px;
+    width:  40px ;
+    object-fit: cover;
+    border-radius: 12px;  
+    margin-right: 14px;  
+    margin-left: 15px;
+}
+.sidebar .profile_content .profil i{
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .profile_content .profil i{
+    opacity: 1;
+    pointer-events: none;
+}
+.Pdep{
+    position: absolute;
+    text-align: center;
+    height:100%;
+    width: calc(100% - 500px);
+    left: calc(100px + 10%);
+    
+}
+.Pdep .T_ecrire{
+    position: relative;
+    top:50px;
+    font-size: 60px;
+    text-shadow: 1px 1px 2px rgb(8, 195, 228), 0 0 25px rgb(1, 0, 12), 0 0 5px rgb(15, 173, 247);
+    
+}
+.Pdep .contenu1{
+    display:none;
+    position: relative;
+    text-align:center;
+    background-color: rgba(230, 239, 240, 0.973);
+    top:100px;
+    left: 10%;
+    width:80%;
+    height: 500px;
+    box-shadow: 0 6px  10px rgba(5, 61, 75, 0.7);
+    border-radius: 12px;  
+    border: 4px ridge rgba(17, 16, 29, 1);
+    animation: gradient 5s ease infinite;
+    transition:all 1s ease;  
+    overflow: auto;
+}
+.Pdep .content_tabel_mail{
+    display:none;
+    position:relative;
+    top:15%;
+    width:80%;
+    left: 10%;
+    height: 100px;
+
+}
+
+#T_From_M{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: separate;
+    width: 100%;
+    table-layout:fixed;
+    
+    
+    
+}
+#T_From_M td, #T_From_M th {
+    position:relative;
+    text-align:center;
+    color:rgb(12, 3, 3);
+    padding: 8px;
+    width: 1%;
+    
+  }
+#T_From_M thead th {
+    background-color: rgba(157, 158, 158, 0.973);
+    text-shadow: 10px 10px 1px rgb(8, 195, 228), 0 0 25px rgb(1, 0, 12), 0 0 5px rgb(15, 173, 247);
+    transition:all 2s ease;
+    border-radius: 4%;
+    box-shadow: 0 6px  10px rgba(5, 61, 75, 0.7);
+    
+}
+#T_From_M tbody td {
+    overflow:hidden;
+    transition:all 2s ease;
+}
+
+#T_From_M tbody tr:hover {
+    background-color:rgb(104, 212, 240);
+    text-overflow: ellipsis;
+    
+}
+
+  #time{
+      font-size: 20px;
+  }
+  #M_body th{
+      position: absolute;
+      text-overflow: ellipsis;
+      
+  }
+#received_M{
+position:relative;
+left: -45%;
+font-size: 400%;
+text-shadow: 1px 1px 2px rgb(228, 213, 8), 0 0 25px rgb(228, 225, 219), 0 0 5px rgb(243, 243, 243);
+    
+}
+#received_M:hover{
+    position:relative;
+    left: -45%;
+    font-size: 400%;
+    text-shadow: 1px 1px 2px rgb(228, 213, 8), 0 0 25px rgb(212, 148, 9), 0 0 5px rgb(243, 243, 243);
+        
+    }
+#send_M{
+position:relative;
+right: -45%;
+font-size: 400%;
+text-shadow: 1px 1px 2px rgb(8, 195, 228), 0 0 25px rgb(226, 224, 233), 0 0 5px rgb(15, 173, 247); 
+}
+#send_M:hover{
+    position:relative;
+    right: -45%;
+    font-size: 400%;
+    text-shadow: 1px 1px 2px rgb(8, 195, 228), 0 0 25px rgb(60, 13, 233), 0 0 5px rgb(15, 173, 247); 
+    }
+     
+ 
+.Pdep .contenu2{
+    display:none;
+    position: relative;
+    text-align:center;
+    background-color: rgba(230, 239, 240, 0.973);
+    top:100px;
+    left: 10%;
+    width:80%;
+    height: 500px;
+    box-shadow: 0 6px  10px rgba(5, 61, 75, 0.7);
+    border-radius: 12px;  
+    border: 4px ridge rgba(17, 16, 29, 1);
+    background: linear-gradient(-45deg, #9d99bb, #cdeff5, #61b3d1, #696be0);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    transition:all 1s ease;
+}
+.Pdep .contenu2 .address_mail {
+  top:20%;
+  height:8%;
+  text-align: center;
+  width:80%;
+  font-size: 20px;
+  border-radius:12px; 
+}
+.Pdep .contenu2 .content_mail{
+    position: relative;
+    background-color: rgba(230, 239, 240, 0.973);
+    top:1%;
+    width:80%;
+    height:50%;
+    border-radius: 12px;  
+    border: 4px ridge rgba(17, 16, 29, 1);
+    font-size: 20px;
+} 
+
+.Pdep .contenu2 .send_mail{
+    position: absolute;
+    border-radius: 12px;  
+    top:85%;
+    left:10%;
+    width:80%;
+    height: 10%;
+    font-size: 30px;
+    transition:all 1s ease;
+    
+}
+.Pdep .contenu2 .send_mail:hover{
+    position: absolute;
+    border-radius: 12px;
+    background-color: #77d37c;  
+    top:85%;
+    left:10%;
+    width:80%;
+    height: 10%;
+    font-size: 30px;
+    
+}
+
+.Pdep .contenu3{
+    display:none;
+    position: relative;
+    text-align:center;
+    background-color: rgb(230, 239, 240);
+    top:100px;
+    left: 10%;
+    width:80%;
+    height: 500px;
+    box-shadow: 0 6px  10px rgba(5, 61, 75, 0.7);
+    border-radius: 12px;  
+    border: 4px ridge rgba(17, 16, 29, 1);
+    animation: gradient 5s ease infinite;
+    transition:all 1s ease;
+} 
+
+#T_Contact{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: separate;
+    width: 100%;
+    table-layout:fixed;
+    
+    
+    
+}
+#T_Contact td, #T_Contact th {
+    position:relative;
+    text-align:center;
+    color:rgb(12, 3, 3);
+    padding: 8px;
+    width: 1%;
+    
+  }
+#T_Contact thead th {
+    background-color: rgba(157, 158, 158, 0.973);
+    text-shadow: 10px 10px 1px rgb(8, 195, 228), 0 0 25px rgb(1, 0, 12), 0 0 5px rgb(15, 173, 247);
+    transition:all 2s ease;
+    border-radius: 4%;
+    box-shadow: 0 6px  10px rgba(5, 61, 75, 0.7);
+    
+}
+#T_Contact tbody td {
+   
+    transition:all 2s ease;
+    overflow:hidden;
+    
+}
+
+#T_Contact tbody tr:hover {
+    background-color:rgb(104, 212, 240);
+    text-overflow: ellipsis;
+    
+}
+.Pdep .add_rem_contact{
+    display:none;
+    position:relative;
+    top:15%;
+    width:80%;
+    left: 10%;
+    height: 100px;
+
+}
+#NC_add{
+position:relative;
+left: -45%;
+font-size: 400%;
+text-shadow: 1px 1px 2px rgb(8, 195, 228), 0 0 25px rgb(30, 243, 40), 0 0 5px rgb(15, 173, 247);
+    
+}
+#C_rem{
+position:relative;
+right: -45%;
+font-size: 400%;
+text-shadow: 1px 1px 2px rgb(8, 195, 228), 0 0 25px rgb(207, 38, 16), 0 0 5px rgb(15, 173, 247);
+
+}
+#curtains{
+    display:block ;
+    z-index: 1030;
+    position: absolute;
+    top: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.678);
+    align-items:center;
+
+}
+#wing{
+    display:block;
+    position: relative;
+    top: 5%;
+    left:15%;
+    border-radius: 5%;
+    border: 4px ridge rgba(17, 16, 29, 1);
+    width:80%;
+    height:80%;
+    background-color: #fff;
+    
+}
+#wind_add{
+    position:relative;
+    top:20%;
+    height:40%;
+    left:25%;
+    width: 50%;
+    border-radius: 4%;
+    background-color: #61b3d1;
+    text-align: center;
+    box-shadow: 60px 60px  60px rgba(5, 61, 75, 0.7);
+}
+#wind_add h1{
+    font-size: 40px;
+}
+
+#sub_N_contact{
+    position: relative;
+    bottom: 5%;
+    height: 10%;
+    width: 90%;
+    font-size: 20px;
+    border-radius: 20px;
+}
+#sub_N_contact:hover{
+    position: relative;
+    background-color: red;
+    top: 5%;
+    height: 10%;
+    width: 90%;
+    font-size: 20px;
+    border-radius: 20px;
+}
+#out{
+    position:relative;
+    font-size: 40px;
+    top: 2%;
+    left: 94%;
+}
+#out:hover{
+    position:relative;
+    color: rgb(221, 9, 9);
+    font-size: 40px;
+    top: 2%;
+    left: 94%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
